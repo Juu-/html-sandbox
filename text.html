@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text</title>
+</head>
+
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    span.underscore {
+        animation-duration: 0.7s;
+        animation-name: underscore;
+        animation-iteration-count: infinite;
+        margin-left: 5px;
+    }
+    @keyframes underscore {
+        from {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+
+<div id="plop"></div>
+
+<script>
+    const div = document.getElementById('plop');
+    const spans = div.getElementsByTagName('span');
+    div.innerHTML = '<span></span><span>_</span>';
+    spans[1].classList.add('underscore');
+    const text = "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.";
+
+    function injectText(text){
+        const textNode = spans[0];
+        let count = textNode.innerText.length.toString();
+        textNode.innerHTML += text[count];
+
+        if(count < text.length-1){
+            setTimeout(() => injectText(text), 20);
+        }
+    }
+    injectText(text);
+</script>
+
+</body>
+</html>
