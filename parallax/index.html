@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .default-parallax {
+            /* The image used */
+            background-image: url('img_parallax.jpg');
+
+            /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content-1 {
+            height: 100%;
+            /*background-color: red;*/
+            font-size: 36px
+        }
+
+        .content-2 {
+            height: 100%;
+            /*background-color: black;*/
+        }
+        .parallax-slider{
+            background: #4a4a4a;
+        }
+        p{
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+<div class="default-parallax"></div>
+
+<div class="content-1 parallax-window" data-parallax="scroll" data-image-src="stellar-spire-eagle-nebula-1400x900.jpg">
+    Scroll Up and Down this page to see the parallax scrolling effect.
+    This div is just here to enable scrolling.
+    Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+
+<div class="default-parallax"></div>
+
+<div class="content-2 parallax-window">
+    <div class="parallax-slider">
+<!--        <span style="position:absolute; top: 400px; left: 400px; background: red;">Some Text</span>-->
+        <img  style="position:absolute; top: 50%; left: 400px;" src="img_parallax.jpg" width="400">
+    </div>
+</div>
+
+<div class="content-2 parallax-window">
+    <div class="parallax-slider">
+        <img  style="position:absolute; top: 50%; left: 400px;" src="img_parallax.jpg" width="400">
+    </div>
+</div>
+
+<div class="default-parallax"></div>
+
+
+<script>
+	$('.parallax-window.content-2').parallax({
+		naturalWidth: window.innerWidth,
+		naturalHeight: window.innerHeight
+	});
+</script>
+</body>
+</html>
