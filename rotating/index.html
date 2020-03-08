@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rotating tests</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<section id="background">
+    <div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</section>
+<section onclick="start()"> click here</section>
+<script>
+    function start(){
+        document.querySelector('#background > div').classList.toggle('anime1')
+        document.querySelector('#background > div > div').classList.toggle('anime2')
+        document.querySelector('#background > div > div > div').classList.toggle('anime3')
+    }
+</script>
+</body>
+</html>

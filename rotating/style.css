@@ -1,0 +1,99 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+section#background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -50%;
+    z-index: 0;
+}
+
+section#background div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.anime-infinite{
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.anime1{
+    animation-name: rotate90dev;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.anime2{
+    animation-name: rotate30dev;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 800ms;
+}
+.anime3{
+    animation-name: rotate95dev;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 900ms;
+}
+section#background div:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+section#background > div:nth-child(1) {
+    width: 100%;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+section#background > div > div {
+    z-index: 1;
+    width: 75%;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+section#background > div > div > div {
+    z-index: 2;
+    width: 50%;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+section:not(#background) {
+    z-index: 1337;
+}
+@keyframes rotate90dev {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+@keyframes rotate30dev {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(30deg);
+    }
+}
+@keyframes rotate95dev {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
