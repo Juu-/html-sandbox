@@ -9,16 +9,20 @@
 <section id="background">
     <div>
         <div>
-            <div></div>
+            <div>
+                <div>
+                    <div></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <section onclick="start()"> click here</section>
 <script>
-    function start(){
-        document.querySelector('#background > div').classList.toggle('anime1')
-        document.querySelector('#background > div > div').classList.toggle('anime2')
+    function start() {
+        document.querySelector('#background > div').classList.toggle('anime5')
         document.querySelector('#background > div > div > div').classList.toggle('anime3')
+        document.querySelector('#background > div > div > div > div > div').classList.toggle('anime1')
     }
 </script>
 </body>
