@@ -74,7 +74,7 @@ section div:nth-child(1) {
     }
 
     to {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
     }
 }
 @keyframes rotate-180 {
