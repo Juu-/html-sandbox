@@ -16,6 +16,8 @@ section:nth-child(2){
 }
 section:nth-child(2) > *{
      flex: 1;
+    display: flex;
+    align-items: center;
  }
 #scroll {
     height: 142px;
@@ -23,6 +25,12 @@ section:nth-child(2) > *{
     cursor: pointer;
     border: #FA6A18 solid 1px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scroll img{
+    height: 40px;
 }
 section:first-child {
     position: absolute;
