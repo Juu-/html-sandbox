@@ -6,23 +6,24 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<section id="background">
+<section>
     <div>
-        <div>
-            <div>
-                <div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
+    </div>
+    <div>
+    </div>
+    <div>
+    </div>
+    <div>
+    </div>
+    <div>
     </div>
 </section>
 <section onclick="start()"> click here</section>
 <script>
     function start() {
-        document.querySelector('#background > div').classList.toggle('anime5')
-        document.querySelector('#background > div > div > div').classList.toggle('anime3')
-        document.querySelector('#background > div > div > div > div > div').classList.toggle('anime1')
+        document.querySelector('section div:nth-child(5)').classList.toggle('anime5');
+        document.querySelector('section div:nth-child(3)').classList.toggle('anime3');
+        document.querySelector('section div:nth-child(1)').classList.toggle('anime1');
     }
 </script>
 </body>

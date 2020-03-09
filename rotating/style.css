@@ -6,7 +6,9 @@ html, body {
     display: flex;
 }
 
-section#background {
+section {
+    min-width: 1600px;
+    min-height: 900px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -18,14 +20,15 @@ section#background {
     background-repeat: no-repeat;
 }
 
-section#background div {
-    display: flex;
+section div {
+    position: absolute;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
     background-position: center center;
     background-repeat: no-repeat;
+}
+section.zoomed{
+    zoom: 110%;
 }
 .anime1{
     animation-name: rotate--180;
@@ -36,40 +39,35 @@ section#background div {
     animation-name: rotate-180;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 800ms;
 }
 .anime5{
     animation-name: rotate--180;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 900ms;
 }
-section#background > div {
+section div:nth-child(5) {
     width: 100%;
     background-image: url("5.png");
 }
 
-section#background > div > div {
+section div:nth-child(4) {
     z-index: 1;
     background-image: url("4.png");
 }
 
-section#background > div > div > div {
+section div:nth-child(3){
     z-index: 2;
     background-image: url("3.png");
 }
-section#background > div > div > div > div {
+section div:nth-child(2) {
     z-index: 2;
     background-image: url("2.png");
 }
-section#background > div > div > div > div > div {
+section div:nth-child(1) {
     z-index: 2;
     background-image: url("1.png");
 }
 
-section:not(#background) {
-    z-index: 1337;
-}
 @keyframes rotate--180 {
     from {
         transform: rotate(0deg);
