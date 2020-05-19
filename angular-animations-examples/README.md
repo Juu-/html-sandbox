@@ -3,6 +3,7 @@
 ## *ngFor
 ### MatItem
 <div align="center"><img src="todo2.gif" width="400px" /></div>
+
 ```javascript
 trigger('matListAnim', [
       transition('* <=> *', [
@@ -25,6 +26,7 @@ trigger('matListAnim', [
 
 ### MatCards
 <div align="center"><img src="stats.gif" heigth="200px" /></div>
+
 ```javascript
 trigger('matCardsAnim', [
       transition('* <=> *', [
