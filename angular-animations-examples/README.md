@@ -1,6 +1,7 @@
 # Angular Animations Examples
 
 ## *ngFor
+### MatItem
 ```javascript
 trigger('matListAnim', [
       transition('* <=> *', [
@@ -22,6 +23,7 @@ trigger('matListAnim', [
 ```
 <div align="center"><img src="todo2.gif" width="400px" /></div>
 
+### MatCards
 ```javascript
 trigger('matCardsAnim', [
       transition('* <=> *', [
