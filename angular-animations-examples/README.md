@@ -20,5 +20,5 @@ trigger('matListAnim', [
       ])
     ])
 ```
-<center><img src="todo.gif" width="400px" /></center>
-<center><img src="stats.gif" heigth="200px" /></center>
+<div align="center"><img src="todo2.gif" width="400px" /></div>
+<div align="center"><img src="stats.gif" heigth="200px" /></div>
