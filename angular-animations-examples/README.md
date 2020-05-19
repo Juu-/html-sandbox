@@ -1,7 +1,7 @@
 # Angular Animations Examples
 
 ## *ngFor
-### MatItem
+### MatItems
 <div align="center"><img src="todo2.gif" width="400px" /></div>
 
 ```javascript
