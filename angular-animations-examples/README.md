@@ -21,4 +21,19 @@ trigger('matListAnim', [
     ])
 ```
 <div align="center"><img src="todo2.gif" width="400px" /></div>
+
+```javascript
+trigger('matCardsAnim', [
+      transition('* <=> *', [
+        query('mat-card:enter',
+          [style({opacity: 0}), stagger('200ms', animate('600ms ease-out', style({opacity: 1})))],
+          {optional: true}
+        ),
+        query('mat-card:leave',
+          animate('200ms', style({opacity: 0})),
+          {optional: true}
+        )
+      ])
+    ])
+```
 <div align="center"><img src="stats.gif" heigth="200px" /></div>
